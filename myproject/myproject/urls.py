@@ -17,6 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from myapp.views import *
+<<<<<<< HEAD
+=======
+from myapp.models import *
+from myapp import views
+
+>>>>>>> a93455c5bc173c7888c0e794e5e74afaf624b516
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth.views import LoginView,LogoutView
@@ -26,7 +32,12 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',homepage,name='homepage'),
+<<<<<<< HEAD
     path('post-project/', PostProjectView.as_view(), name='post_project'),
+=======
+    path('project_list/',project_list,name='project_list'),
+    path('register/',views.register,name='register')
+>>>>>>> a93455c5bc173c7888c0e794e5e74afaf624b516
 ]
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
